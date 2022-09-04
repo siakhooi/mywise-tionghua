@@ -1,0 +1,18 @@
+DIV.navigator{
+	text-align: center;
+	background-color: #f0f0f0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+SPAN.navigator{
+	font-size: 20px; 
+	padding-right: 5px;
+	padding-left: 5px;
+}
+A.navigator{
+	text-decoration: none; 
+  color: green;
+}
+A.navigator:hover{
+	text-decoration: underline; 
+}

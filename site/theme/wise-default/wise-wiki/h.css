@@ -1,0 +1,40 @@
+/*//
+// *****************************************************************************
+// This program is part of MyWISE - My Wiki Inside Site Engine
+//
+// See LICENSE.md in the project root for license information.
+// *****************************************************************************
+//*/
+H1.wise-wiki{
+	background: #010101;
+	color: white;
+  text-transform: uppercase;
+  margin: 0px;
+  text-indent: 0px;
+  font-size:18px;
+}
+H2.wise-wiki{
+	background: #010101;
+	color: white;
+  padding: 5px 0 5px 5px; 
+  margin: 0px;
+  text-indent: 0px;
+  width: 80%;
+	font-size: 16px;
+	font-weight: normal;
+}
+H3.wise-wiki{
+	font-size: 14px;
+	width: 50%;
+	background: #010101;
+	color: white;
+}
+H4.wise-wiki{
+	width: 40%;
+	background: #010101;
+	color: white;
+}
+H5.wise-wiki{
+}
+H6.wise-wiki{
+}

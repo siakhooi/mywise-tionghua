@@ -1,0 +1,14 @@
+/*//
+// *****************************************************************************
+// This program is part of MyWISE - My Wiki Inside Site Engine
+//
+// See LICENSE.md in the project root for license information.
+// *****************************************************************************
+// */
+DIV.wise-page-content {
+	padding-left: 0px; 
+	padding-right: 0px;
+	background-color: white;
+	 color: #010101;
+	font-size: 18px;
+}

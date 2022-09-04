@@ -1,0 +1,58 @@
+/*//
+// *****************************************************************************
+// This program is part of MyWISE - My Wiki Inside Site Engine
+//
+// See LICENSE.md in the project root for license information.
+// *****************************************************************************
+// */
+.gwt-MenuBar{
+  padding: 0 10px 0 10px;
+}
+.gwt-MenuBar .gwt-MenuItem{
+  padding: 5px 20px 5px 20px;
+  color: #010101;
+  border: solid 1px #010101;
+  font-size: 12px;
+}
+.gwt-MenuBar .gwt-MenuItem-selected{
+  padding: 5px 20px 5px 20px;
+  cursor: pointer;
+  color: #eeeeee;
+  border: solid 1px #010101;
+  background-color: #010101;
+}
+.gwt-MenuBar-dropdown{
+  padding: 0px 2px 0px 2px;
+  background-color: #eeeeff;
+  border: #010101 solid 1px;
+}
+.gwt-MenuBar-dropdown .gwt-MenuItem{
+  padding: 5px 20px 5px 20px;
+  color: #010101;
+  border: none;
+}
+.gwt-MenuBar-dropdown .gwt-MenuItem-selected{
+  padding: 5px 20px 5px 20px;
+  background-color: #010101;
+  color: #eeeeee;
+}
+DIV#wise-menu-site TABLE{
+border-spacing: 0px;
+}
+DIV#wise-menu-site{
+	margin: 10px 0 10px 0;
+	height: 30px;
+	color:#010101;
+	text-align: right;  
+  background-color: #eeeeff;
+}
+DIV#wise-menu-site .gwt-MenuBar-dropdown{
+  background-color: #eeeeff;
+}
+DIV#wise-menu-group-Layout{
+	margin: 10px 0 10px 0;
+	height: 30px;
+	color:#010101;
+	text-align: right;  
+  background-color: #eeeeff;
+}

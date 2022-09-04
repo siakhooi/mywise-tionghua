@@ -1,0 +1,42 @@
+name: Build to Deploy
+on:
+  release:
+    types: [created]
+
+env:
+  DOCKERFILE: Dockerfile
+  REGISTRY0: registry.hub.docker.com
+  REGISTRY_USER0: ${{ secrets.REGISTRY_USER_DOCKER }}
+  REGISTRY_PASSWORD0: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
+  TAG0: registry.hub.docker.com/siakhooi/tionghua
+  REGISTRY1: docker.pkg.github.com
+  REGISTRY_USER1: ${{ secrets.REGISTRY_USER_GITHUB }}
+  REGISTRY_PASSWORD1: ${{ secrets.REGISTRY_PASSWORD_GITHUB }}
+  TAG1: docker.pkg.github.com/siakhooi/mywise-tionghua/tionghua
+
+jobs:
+  build-to-deploy:
+    runs-on: ubuntu-latest
+    container:
+      image: docker:19.03.12-dind
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+      - name: Generate files
+        run: . .github/workflows/generate.sh
+      - name: set env
+        run: echo "MYVERSION=$(echo $GITHUB_REF | cut -d / -f 3)" >> $GITHUB_ENV
+      - name: docker build
+        run: docker build  -f $DOCKERFILE -t $TAG0:latest -t $TAG0:$MYVERSION -t $TAG1:$MYVERSION .
+      - name: docker images
+        run: docker images
+      - name: Login to Docker Hub
+        run: docker login -u $REGISTRY_USER0 -p "$REGISTRY_PASSWORD0" $REGISTRY0
+      - name: Push to latest
+        run: docker push $TAG0:latest
+      - name: Push to docker hub
+        run: docker push $TAG0:$MYVERSION
+      - name: Login to GitHub registry
+        run: docker login -u $REGISTRY_USER1 -p "$REGISTRY_PASSWORD1" $REGISTRY1
+      - name: Push to github registry
+        run: docker push $TAG1:$MYVERSION
