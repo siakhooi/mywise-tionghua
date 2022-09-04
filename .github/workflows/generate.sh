@@ -2,7 +2,7 @@
 
 CD1='cd /site-files'
 MD1='mkdir -p site/wiki/紅樓夢/人物 site/wiki/三國演義/人物 site/wiki/水滸傳/人物 site/wiki/西遊記/人物'
-RM1='rm site/wiki/紅樓夢/人物/* site/wiki/三國演義/人物/* site/wiki/水滸傳/人物/* site/wiki/西遊記/人物/*'
+RM1='rm -f site/wiki/紅樓夢/人物/* site/wiki/三國演義/人物/* site/wiki/水滸傳/人物/* site/wiki/西遊記/人物/*'
 RUN1='php scripts/run-hlm.php'
 RUN2='php scripts/run-sgyy.php'
 RUN3='php scripts/run-shz.php'
