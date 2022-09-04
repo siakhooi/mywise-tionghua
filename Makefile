@@ -1,6 +1,3 @@
-generate:
-	. .github/workflows/generate.sh
-
 build:
 	podman build -t tionghua:latest . 
 
