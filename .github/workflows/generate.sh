@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 CD1='cd /site-files'
 MD1='mkdir -p site/wiki/紅樓夢/人物 site/wiki/三國演義/人物 site/wiki/水滸傳/人物 site/wiki/西遊記/人物'
 RM1='rm -f site/wiki/紅樓夢/人物/* site/wiki/三國演義/人物/* site/wiki/水滸傳/人物/* site/wiki/西遊記/人物/*'
@@ -9,5 +11,10 @@ RUN3='php scripts/run-shz.php'
 RUN4='php scripts/run-xyj.php'
 EXIT1='exit'
 COMMAND="${CD1} && ${MD1} && ${RM1} && ${RUN1} && ${RUN2} && ${RUN3} && ${RUN4} && ${EXIT1}"
+
+echo "$COMMAND"
+
+ls -l
+ls -l scripts/*
 
 docker run --rm -v "$(pwd)":/site-files siakhooi/mywise:latest bash -c "$COMMAND"
