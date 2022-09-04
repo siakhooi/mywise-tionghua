@@ -10,4 +10,8 @@ RUN4='php scripts/run-xyj.php'
 EXIT1='exit'
 COMMAND="${CD1} && ${MD1} && ${RM1} && ${RUN1} && ${RUN2} && ${RUN3} && ${RUN4} && ${EXIT1}"
 
+<<<<<<< HEAD
 docker run --rm -v "$(pwd)":/site-files siakhooi/mywise:latest bash -c "$COMMAND"
+=======
+docker run --rm -v .:/site-files siakhooi/mywise:latest bash -c "$COMMAND"
+>>>>>>> af9dae490d0e270d0bac2e82427d73462658f796
