@@ -22,8 +22,6 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
-      - name: Generate files
-        run: . .github/workflows/generate.sh
       - name: set env
         run: echo "MYVERSION=$(echo $GITHUB_REF | cut -d / -f 3)" >> $GITHUB_ENV
       - name: docker build
