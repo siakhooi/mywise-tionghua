@@ -1,0 +1,51 @@
+/*//
+// *****************************************************************************
+// This program is part of MyWISE - My Wiki Inside Site Engine
+//
+// See LICENSE.md in the project root for license information.
+// *****************************************************************************
+//*/
+p.wise-wiki{
+	text-indent: 50px; 
+	text-align:justify;
+}
+DIV.wise-wiki-p{
+}
+DIV.user-poem{
+	margin-top: 20px;
+}
+p.user-poem{
+	font-style: italic;
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+DIV.user-letter{
+	padding-top: 10px;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	background-color: #eeeeee;
+}
+p.user-letter{
+	text-align: left;
+	text-indent: 50px;
+}
+DIV.user-list{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #eeeeee;
+}
+p.user-list{
+	text-align: left;
+	text-indent: 50px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+
+

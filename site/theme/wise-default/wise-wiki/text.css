@@ -1,0 +1,20 @@
+/*//
+// *****************************************************************************
+// This program is part of MyWISE - My Wiki Inside Site Engine
+//
+// See LICENSE.md in the project root for license information.
+// *****************************************************************************
+//*/
+BIG.wise-wiki{}
+SMALL.wise-wiki{}
+SUP.wise-wiki{}
+SUB.wise-wiki{}
+INS.wise-wiki{}
+DEL.wise-wiki{}
+SPAN.wise-wiki{}
+STRONG.wise-wiki{}
+EM.wise-wiki{}
+
+SPAN.user-span-important{
+    color: #FF9900;
+}

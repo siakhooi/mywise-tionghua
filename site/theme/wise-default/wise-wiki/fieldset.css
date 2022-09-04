@@ -1,0 +1,36 @@
+/*//
+// *****************************************************************************
+// This program is part of MyWISE - My Wiki Inside Site Engine
+//
+// See LICENSE.md in the project root for license information.
+// *****************************************************************************
+//*/
+DIV.wise-wiki-fieldset{ }
+PRE.wise-wiki-fieldset{
+	font-family: courier, monospace;
+	font-size: 12px;
+}
+FIELDSET.wise-wiki{ }
+LEGEND.wise-wiki{
+		font-weight: bold;
+}
+//-----------------------------------------
+LEGEND.user-fieldset-reference{
+}
+FIELDSET.user-fieldset-reference{
+    background: #eeeeff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: solid 1px black;
+    font-size: 14px;
+}
+DIV.user-fieldset-reference{
+}
+DIV.user-fieldset-reference UL{
+	margin-top: 0px; 
+	margin-bottom: 0px;
+}
+DIV.user-fieldset-reference A{
+	font-size: 14px;
+}
+

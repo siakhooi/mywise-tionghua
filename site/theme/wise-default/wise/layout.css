@@ -1,0 +1,25 @@
+/*//
+// *****************************************************************************
+// This program is part of MyWISE - My Wiki Inside Site Engine
+//
+// See LICENSE.md in the project root for license information.
+// *****************************************************************************
+// */
+///*Border Layout*/
+table.borderlayout-group { width: 100%;  }
+table.borderlayout-group tr td{  }
+tr.borderlayout-group {}
+td.borderlayout-top-group {}
+td.borderlayout-bot-group {}
+td.borderlayout-left-group   { vertical-align: top; }
+td.borderlayout-right-group  { vertical-align: top;  }
+td.borderlayout-center-group { vertical-align: top; width: 100%; }
+
+table.borderlayout-site { width: 100%; }
+table.borderlayout-site tr td{}
+tr.borderlayout-site {}
+td.borderlayout-top-site {}
+td.borderlayout-bot-site {}
+td.borderlayout-left-site   {  vertical-align: top;}
+td.borderlayout-right-site  {  vertical-align: top; }
+td.borderlayout-center-site {  vertical-align: top; width: 100%; }

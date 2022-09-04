@@ -1,0 +1,14 @@
+/*//
+// *****************************************************************************
+// This program is part of MyWISE - My Wiki Inside Site Engine
+//
+// See LICENSE.md in the project root for license information.
+// *****************************************************************************
+//*/
+DIV.wise-wiki-image { padding-bottom: 20px; }
+IMG.wise-wiki-image { padding: 2px 2px 2px 2px; margin: 2px 2px 2px 2px; max-height: 100px; }
+DIV.wise-wiki-thumbnail { padding-bottom: 10px; }
+IMG.wise-wiki-thumbnail { height: 50px;}
+A.wise-wiki-thumbnail   { text-decoration: none;}
+SPAN.wise-wiki-thumbnail{ font-size:10px; }
+IMG.wise-wiki-image-icon { height: 20px;}

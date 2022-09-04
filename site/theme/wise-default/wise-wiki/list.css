@@ -1,0 +1,15 @@
+/*//
+// *****************************************************************************
+// This program is part of MyWISE - My Wiki Inside Site Engine
+//
+// See LICENSE.md in the project root for license information.
+// *****************************************************************************
+//*/
+OL.wise-wiki{
+}
+UL.wise-wiki{
+}
+LI.wise-wiki{
+    text-indent: 0px;
+    text-align: justify;
+}

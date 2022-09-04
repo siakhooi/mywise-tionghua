@@ -1,0 +1,18 @@
+/*//
+// *****************************************************************************
+// This program is part of MyWISE - My Wiki Inside Site Engine
+//
+// See LICENSE.md in the project root for license information.
+// *****************************************************************************
+//*/
+
+A.wise-wiki-external-link{
+	color: teal;
+	font-size: 20px; 
+	text-decoration: none; 
+}
+A.wise-wiki-external-link:hover{
+	text-decoration: underline; 
+}
+A.user-external-link-wikipedia{}
+A.user-external-link-hudong{}
