@@ -8,11 +8,13 @@ env:
   REGISTRY0: registry.hub.docker.com
   REGISTRY_USER0: ${{ secrets.REGISTRY_USER_DOCKER }}
   REGISTRY_PASSWORD0: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
-  TAG0: registry.hub.docker.com/siakhooi/tionghua
+  TAG0A: registry.hub.docker.com/siakhooi/tionghua
+  TAG0B: registry.hub.docker.com/siakhooi/bukusaga
   REGISTRY1: docker.pkg.github.com
   REGISTRY_USER1: ${{ secrets.REGISTRY_USER_GITHUB }}
   REGISTRY_PASSWORD1: ${{ secrets.REGISTRY_PASSWORD_GITHUB }}
-  TAG1: docker.pkg.github.com/siakhooi/mywise-tionghua/tionghua
+  TAG1A: docker.pkg.github.com/siakhooi/mywise-tionghua/tionghua
+  TAG1B: docker.pkg.github.com/siakhooi/mywise-tionghua/bukusaga
 
 jobs:
   build-to-deploy:
@@ -24,17 +26,13 @@ jobs:
         uses: actions/checkout@v3
       - name: set env
         run: echo "MYVERSION=$(echo $GITHUB_REF | cut -d / -f 3)" >> $GITHUB_ENV
-      - name: docker build
-        run: docker build  -f $DOCKERFILE -t $TAG0:latest -t $TAG0:$MYVERSION -t $TAG1:$MYVERSION .
-      - name: docker images
-        run: docker images
-      - name: Login to Docker Hub
-        run: docker login -u $REGISTRY_USER0 -p "$REGISTRY_PASSWORD0" $REGISTRY0
-      - name: Push to latest
-        run: docker push $TAG0:latest
-      - name: Push to docker hub
-        run: docker push $TAG0:$MYVERSION
-      - name: Login to GitHub registry
-        run: docker login -u $REGISTRY_USER1 -p "$REGISTRY_PASSWORD1" $REGISTRY1
-      - name: Push to github registry
-        run: docker push $TAG1:$MYVERSION
+      - run: docker build  -f $DOCKERFILE -t $TAG0A:latest -t $TAG0A:$MYVERSION -t $TAG0B:latest -t $TAG0B:$MYVERSION -t $TAG1A:$MYVERSION -t $TAG1B:$MYVERSION .
+      - run: docker images
+      - run: docker login -u $REGISTRY_USER0 -p "$REGISTRY_PASSWORD0" $REGISTRY0
+      - run: docker push $TAG0A:latest
+      - run: docker push $TAG0A:$MYVERSION
+      - run: docker push $TAG0B:latest
+      - run: docker push $TAG0B:$MYVERSION
+      - run: docker login -u $REGISTRY_USER1 -p "$REGISTRY_PASSWORD1" $REGISTRY1
+      - run: docker push $TAG1A:$MYVERSION
+      - run: docker push $TAG1B:$MYVERSION
