@@ -1,7 +1,7 @@
 #!/bin/bash
 
-F=./TEST_FILE
-#F=site/wiki/西遊記/章回/006
+#F=./TEST_FILE
+F=site/wiki/西遊記/章回/006
 M=xyj.map.yml
 
 LIST_OF_NAME=$(yq -o j $M | jq -r '.[]|keys|.[]')
